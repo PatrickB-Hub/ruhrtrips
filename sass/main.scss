@@ -3,5 +3,12 @@
 
 @import "base/base";
 @import "base/typography";
+@import "base/utilities";
+@import "base/animations";
+
+@import "components/button";
+@import "components/flex";
+@import "components/gallery";
 
 @import "layout/header";
+@import "layout/about";
