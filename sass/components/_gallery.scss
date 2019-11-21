@@ -8,7 +8,8 @@
     position: absolute;
     z-index: 10;
     transition: all 0.2s;
-    outline-offset: 1rem;
+    outline-offset: -1px;
+    outline: 0.5rem solid $color-grey-dark;
 
     @include respond(tab-port) {
       float: left;
@@ -22,7 +23,7 @@
       left: 0;
 
       @include respond(tab-port) {
-        top: 0;
+        top: 1rem;
         transform: scale(1.2);
       }
     }
@@ -34,7 +35,7 @@
       @include respond(tab-port) {
         top: -1rem;
         transform: scale(1.3);
-        z-index: 100;
+        z-index: 10;
       }
     }
 
@@ -45,20 +46,27 @@
       @include respond(tab-port) {
         top: 1rem;
         left: 0;
-        transform: scale(1.05);
+        transform: scale(1.3);
       }
     }
 
     &:hover {
-      outline: 1.5rem solid $color-outline;
-      transform: scale(1.05) translateY(-0.5rem);
+      outline: 1rem solid $color-grey-dark-2;
+      transform: scale(1.07) translateY(-0.5rem);
       box-shadow: 0 2.5rem 4rem rgba($color-black, 0.6);
       z-index: 30;
+
+      @include respond(tab-port) {
+        outline: .7rem solid $color-grey-dark-2;
+        transform: scale(1.4);
+        box-shadow: 0 2.5rem 4rem rgba($color-black, 0.6);
+        z-index: 30;
+      }
     }
   }
 
   /* pull the other images back, when one is hovered over */
   &:hover &__images:not(:hover) {
-    transform: scale(0.95);
+    transform: scale(0.93);
   }
 }
