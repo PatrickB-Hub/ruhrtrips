@@ -255,11 +255,33 @@ body {
       @media only screen and (max-width: 56.25em) {
         .gallery__images:hover {
           outline: 0.7rem solid #999;
-          transform: scale(1.4);
-          box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.6);
-          z-index: 30; } }
+          transform: scale(1.4); } }
   .gallery:hover .gallery__images:not(:hover) {
     transform: scale(0.93); }
+
+.feature-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s; }
+  @media only screen and (max-width: 56.25em) {
+    .feature-container {
+      padding: 2rem; } }
+  .feature-container__icon {
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #ff9442, #c43e00);
+    -webkit-background-clip: text;
+    color: transparent; }
+    @media only screen and (max-width: 56.25em) {
+      .feature-container__icon {
+        margin-bottom: 0; } }
+  .feature-container:hover {
+    transform: translateY(-1.5rem) scale(1.03); }
 
 .header {
   height: 100vh;
@@ -307,3 +329,15 @@ body {
   @media only screen and (max-width: 56.25em) {
     .section-about {
       padding: 20rem 0; } }
+
+.section-features {
+  padding: 20rem 5rem;
+  background-image: linear-gradient(to right bottom, rgba(255, 148, 66, 0.8), rgba(196, 62, 0, 0.8)), url(../img/zechen/ewald-medium-3-min.jpg);
+  background-size: cover;
+  transform: skewY(-6deg);
+  margin-top: -10rem; }
+  .section-features > * {
+    transform: skewY(6deg); }
+  @media only screen and (max-width: 56.25em) {
+    .section-features {
+      padding: 10rem 0; } }

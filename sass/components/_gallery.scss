@@ -59,8 +59,6 @@
       @include respond(tab-port) {
         outline: .7rem solid $color-grey-dark-2;
         transform: scale(1.4);
-        box-shadow: 0 2.5rem 4rem rgba($color-black, 0.6);
-        z-index: 30;
       }
     }
   }
