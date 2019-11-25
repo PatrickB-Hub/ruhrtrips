@@ -1,28 +1,3 @@
-.btn-text {
-  &:link,
-  &:visited {
-    font-size: $default-font-size;
-    color: $color-primary;
-    display: inline-block;
-    text-decoration: none;
-    border-bottom: 1px solid $color-primary;
-    padding: 3px;
-    transition: all 0.2s;
-  }
-
-  &:hover {
-    background-color: $color-primary;
-    color: $color-white;
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
-    transform: translateY(-2px);
-  }
-
-  &:active {
-    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
-    transform: translateY(0);
-  }
-}
-
 .btn {
   &,
   &:link,
@@ -36,7 +11,6 @@
     position: relative;
     font-size: $default-font-size;
 
-    // Change for the <button> element
     border: none;
     cursor: pointer;
   }
@@ -67,6 +41,15 @@
     }
   }
 
+  &--colored {
+    background-color: $color-primary-light;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary-light;
+    }
+  }
+
   /* duplicate button for hover effect */
   &::after {
     content: "";
@@ -84,5 +67,30 @@
   &--animated {
     animation: moveInBottom 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: 3px;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+    transform: translateY(0);
   }
 }
