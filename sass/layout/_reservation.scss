@@ -1,0 +1,62 @@
+.section-reservation {
+  padding: 15rem 5rem;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.15),
+    inset 0 -4px 8px rgba(0, 0, 0, 0.15);
+
+  @include respond(tab-land) {
+    padding: 10rem 5rem;
+  }
+}
+
+.reservation {
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.9) 0%,
+      rgba($color-white, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../img/zechen/zollern-medium-2-min.jpg);
+  background-size: 100%;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 65%,
+        transparent 65%
+      ),
+      url(../img/zechen/zollern-medium-2-min.jpg);
+    background-size: cover;
+  }
+
+  @include respond(tab-port) {
+    max-width: 50rem;
+    margin: 0 auto;
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 100%
+      ),
+      url(../img/zechen/zollern-medium-2-min.jpg);
+  }
+
+  &__form {
+    width: 50%;
+    padding: 6rem;
+
+    @include respond(tab-land) {
+      width: 65%;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+}
