@@ -410,10 +410,7 @@
     <footer class="footer">
       <div class="footer__logo-box">
         <a href="#"
-          ><img
-            alt="Logo"
-            src="img/logo/gradient-text.png"
-            class="footer__logo"
+          ><img alt="Logo" src="img/logo/gradient-text.png" class="footer__logo"
         /></a>
       </div>
       <div class="flex-container">
@@ -438,12 +435,17 @@
         <div class="col-1-of-2">
           <div class="util-align-text-right">
             <span class="footer__copyright">
-              Copyright &copy; 2019, erstellt von
+              Copyright &copy; <span id="year"></span>, erstellt von
               <a href="#" class="footer__link">Patrick Becker</a>
             </span>
           </div>
         </div>
       </div>
     </footer>
+    <script>
+      const year = document.getElementById("year");
+      const date = new Date();
+      year.textContent = date.getFullYear();
+    </script>
   </body>
 </html>
