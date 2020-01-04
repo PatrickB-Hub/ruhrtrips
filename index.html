@@ -29,6 +29,61 @@
     <title>Ruhrtrips | Reisen im Ruhrgebiet</title>
   </head>
   <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+
+      <div class="navigation__background">&nbsp;</div>
+
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a
+              href="#section-about"
+              class="navigation__link"
+              onclick="closeNav()"
+              ><span>01</span>Über Ruhrtrips</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a
+              href="#section-features"
+              class="navigation__link"
+              onclick="closeNav()"
+              ><span>02</span>Features</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a
+              href="#section-tours"
+              class="navigation__link"
+              onclick="closeNav()"
+              ><span>03</span>Beliebte Touren</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a
+              href="#section-stories"
+              class="navigation__link"
+              onclick="closeNav()"
+              ><span>04</span>Rezensionen</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a
+              href="#section-reservation"
+              class="navigation__link"
+              onclick="closeNav()"
+              ><span>05</span>Reservierung</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
     <header class="header">
       <div class="header__logo-container">
         <img src="img/logo/white.png" alt="Logo" class="header__logo" />
@@ -43,9 +98,9 @@
     </header>
 
     <main>
-      <section class="section-about" id="section-about">
+      <section class="section-about">
         <div class="util-center-text util-margin-bottom-big">
-          <h2 class="heading-secondary">
+          <h2 class="heading-secondary" id="section-about">
             <span class="heading-secondary--span"
               >Entdecken Sie Industriegeschichte</span
             >
@@ -154,9 +209,9 @@
         </div>
       </section>
 
-      <section class="section-tours" id="section-tours">
+      <section class="section-tours">
         <div class="util-center-text util-margin-bottom-big">
-          <h2 class="heading-secondary">
+          <h2 class="heading-secondary" id="section-tours">
             <span class="heading-secondary--span">Die beliebtesten Touren</span>
           </h2>
         </div>
@@ -267,9 +322,9 @@
         </div>
       </section>
 
-      <section class="section-stories" id="section-stories">
+      <section class="section-stories">
         <div class="util-center-text util-margin-bottom-big">
-          <h2 class="heading-secondary">
+          <h2 class="heading-secondary" id="section-stories">
             <span class="heading-secondary--span"
               >Wir sorgen für einmalige Erlebnisse</span
             >
@@ -327,9 +382,9 @@
         </div>
       </section>
 
-      <section class="section-reservation" id="section-reservation">
+      <section class="section-reservation">
         <div class="reservation">
-          <div class="reservation__form">
+          <div class="reservation__form" id="section-reservation">
             <form action="#" class="form">
               <div class="util-margin-bottom-medium">
                 <h2 class="heading-secondary">
@@ -446,6 +501,11 @@
       const year = document.getElementById("year");
       const date = new Date();
       year.textContent = date.getFullYear();
+
+      const closeNav = () => {
+        const navigationCheckbox = document.getElementById("navi-toggle");
+        navigationCheckbox.checked = false;
+      };
     </script>
   </body>
 </html>
