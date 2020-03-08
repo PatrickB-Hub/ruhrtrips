@@ -799,7 +799,7 @@ body {
       padding: 10rem 0; } }
 
 .section-reservation {
-  padding: 15rem 5rem;
+  padding: 10rem;
   background-image: linear-gradient(to right bottom, #fc872c, #c43e00);
   box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.15), inset 0 -4px 8px rgba(0, 0, 0, 0.15); }
   @media only screen and (max-width: 75em) {
